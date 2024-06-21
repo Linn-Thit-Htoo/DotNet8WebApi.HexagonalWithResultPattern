@@ -1,41 +1,38 @@
-﻿using DotNet8WebApi.HexagonalWithResultPattern.Shared;
+﻿namespace DotNet8WebApi.HexagonalWithResultPattern.Models.Features.Blog;
 
-namespace DotNet8WebApi.HexagonalWithResultPattern.Models.Features.Blog
+public class BlogRequestModel
 {
-    public class BlogRequestModel
+    public string BlogTitle { get; set; } = null!;
+
+    public string BlogAuthor { get; set; } = null!;
+
+    public string BlogContent { get; set; } = null!;
+
+    public Result<BlogResponseModel> IsValid()
     {
-        public string BlogTitle { get; set; } = null!;
+        Result<BlogResponseModel> responseModel;
 
-        public string BlogAuthor { get; set; } = null!;
-
-        public string BlogContent { get; set; } = null!;
-
-        public Result<BlogResponseModel> IsValid()
+        if (BlogTitle.IsNullOrEmpty())
         {
-            Result<BlogResponseModel> responseModel;
+            responseModel = Result<BlogResponseModel>.FailureResult("Blog Title cannot be empty.");
+            goto result;
+        }
 
-            if (BlogTitle.IsNullOrEmpty())
-            {
-                responseModel = Result<BlogResponseModel>.FailureResult("Blog Title cannot be empty.");
-                goto result;
-            }
+        if (BlogAuthor.IsNullOrEmpty())
+        {
+            responseModel = Result<BlogResponseModel>.FailureResult("Blog Author cannot be empty.");
+            goto result;
+        }
 
-            if (BlogAuthor.IsNullOrEmpty())
-            {
-                responseModel = Result<BlogResponseModel>.FailureResult("Blog Author cannot be empty.");
-                goto result;
-            }
+        if (BlogContent.IsNullOrEmpty())
+        {
+            responseModel = Result<BlogResponseModel>.FailureResult("Blog Content cannot be empty.");
+            goto result;
+        }
 
-            if (BlogContent.IsNullOrEmpty())
-            {
-                responseModel = Result<BlogResponseModel>.FailureResult("Blog Content cannot be empty.");
-                goto result;
-            }
-
-            responseModel = Result<BlogResponseModel>.SuccessResult();
+        responseModel = Result<BlogResponseModel>.SuccessResult();
 
         result:
-            return responseModel;
-        }
+        return responseModel;
     }
 }
