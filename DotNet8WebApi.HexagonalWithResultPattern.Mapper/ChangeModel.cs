@@ -1,7 +1,4 @@
-﻿using DotNet8WebApi.HexagonalWithResultPattern.DbService.AppDbContexts;
-using DotNet8WebApi.HexagonalWithResultPattern.Models.Features.Blog;
-
-namespace DotNet8WebApi.HexagonalWithResultPattern.Mapper
+﻿namespace DotNet8WebApi.HexagonalWithResultPattern.Mapper
 {
     public static class ChangeModel
     {
