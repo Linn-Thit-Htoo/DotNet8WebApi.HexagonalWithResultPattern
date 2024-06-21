@@ -1,5 +1,8 @@
 # DotNet8WebApi.HexagonalWithResultPattern
 
+> [!Project Scope]
+> Sample mini CRUD using Vertical Slice Architecture, N Layer Architecture and Repository Design Pattern
+
 ### EF scaffold Db Context Command
 > dotnet ef dbcontext scaffold "Server=.;Database=testDb;User ID=sa;Password=sasa@123;TrustServerCertificate=True;" Microsoft.EntityFrameworkCore.SqlServer -o AppDbContexts -c AppDbContext
 
