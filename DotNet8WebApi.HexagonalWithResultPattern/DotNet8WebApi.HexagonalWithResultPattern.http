@@ -1,0 +1,6 @@
+@DotNet8WebApi.HexagonalWithResultPattern_HostAddress = http://localhost:5258
+
+GET {{DotNet8WebApi.HexagonalWithResultPattern_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
