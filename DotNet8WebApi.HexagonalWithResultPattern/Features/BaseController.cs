@@ -1,7 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using Newtonsoft.Json;
-
-namespace DotNet8WebApi.HexagonalWithResultPattern.Features
+﻿namespace DotNet8WebApi.HexagonalWithResultPattern.Features
 {
     [Route("api/[controller]")]
     [ApiController]

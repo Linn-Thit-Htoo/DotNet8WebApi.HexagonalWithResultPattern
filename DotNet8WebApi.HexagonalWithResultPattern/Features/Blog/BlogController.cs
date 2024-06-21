@@ -1,6 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
-
-namespace DotNet8WebApi.HexagonalWithResultPattern.Features.Blog;
+﻿namespace DotNet8WebApi.HexagonalWithResultPattern.Features.Blog;
 
 [Route("api/[controller]")]
 [ApiController]
