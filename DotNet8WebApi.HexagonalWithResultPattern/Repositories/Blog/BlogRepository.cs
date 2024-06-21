@@ -2,7 +2,6 @@
 using DotNet8WebApi.HexagonalWithResultPattern.Mapper;
 using DotNet8WebApi.HexagonalWithResultPattern.Shared;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata;
 
 namespace DotNet8WebApi.HexagonalWithResultPattern.Repositories.Blog
 {
