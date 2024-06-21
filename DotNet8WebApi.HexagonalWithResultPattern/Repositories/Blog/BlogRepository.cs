@@ -127,19 +127,13 @@ namespace DotNet8WebApi.HexagonalWithResultPattern.Repositories.Blog
                 }
 
                 if (!requestModel.BlogTitle.IsNullOrEmpty())
-                {
                     item.BlogTitle = requestModel.BlogTitle;
-                }
 
                 if (!requestModel.BlogAuthor.IsNullOrEmpty())
-                {
                     item.BlogAuthor = requestModel.BlogAuthor;
-                }
 
                 if (!requestModel.BlogContent.IsNullOrEmpty())
-                {
                     item.BlogContent = requestModel.BlogContent;
-                }
 
                 _appDbContext.TblBlogs.Update(item);
                 int result = await _appDbContext.SaveChangesAsync();
