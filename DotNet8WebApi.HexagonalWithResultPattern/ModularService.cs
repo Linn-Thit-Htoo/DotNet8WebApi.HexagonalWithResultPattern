@@ -2,23 +2,33 @@
 
 public static class ModularService
 {
-    public static IServiceCollection AddFeatures(this IServiceCollection services, WebApplicationBuilder builder)
+    public static IServiceCollection AddFeatures(
+        this IServiceCollection services,
+        WebApplicationBuilder builder
+    )
     {
-        services.AddDbContextServices(builder)
-        .AddRepositoriesServices()
-        .AddBusinessLogicServices()
-        .AddJsonServices();
+        services
+            .AddDbContextServices(builder)
+            .AddRepositoriesServices()
+            .AddBusinessLogicServices()
+            .AddJsonServices();
 
         return services;
     }
 
-    private static IServiceCollection AddDbContextServices(this IServiceCollection services, WebApplicationBuilder builder)
+    private static IServiceCollection AddDbContextServices(
+        this IServiceCollection services,
+        WebApplicationBuilder builder
+    )
     {
-        builder.Services.AddDbContext<AppDbContext>(opt =>
-        {
-            opt.UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking);
-            opt.UseSqlServer(builder.Configuration.GetConnectionString("DbConnection"));
-        }, ServiceLifetime.Transient);
+        builder.Services.AddDbContext<AppDbContext>(
+            opt =>
+            {
+                opt.UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking);
+                opt.UseSqlServer(builder.Configuration.GetConnectionString("DbConnection"));
+            },
+            ServiceLifetime.Transient
+        );
 
         return services;
     }
@@ -37,10 +47,12 @@ public static class ModularService
 
     private static IServiceCollection AddJsonServices(this IServiceCollection services)
     {
-        services.AddControllers().AddJsonOptions(opt =>
-        {
-            opt.JsonSerializerOptions.PropertyNamingPolicy = null;
-        });
+        services
+            .AddControllers()
+            .AddJsonOptions(opt =>
+            {
+                opt.JsonSerializerOptions.PropertyNamingPolicy = null;
+            });
         return services;
     }
 }
