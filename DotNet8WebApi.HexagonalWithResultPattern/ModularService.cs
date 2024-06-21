@@ -4,10 +4,10 @@ public static class ModularService
 {
     public static IServiceCollection AddFeatures(this IServiceCollection services, WebApplicationBuilder builder)
     {
-        services.AddDbContextServices(builder);
-        services.AddRepositoriesServices();
-        services.AddBusinessLogicServices();
-        services.AddJsonServices();
+        services.AddDbContextServices(builder)
+        .AddRepositoriesServices()
+        .AddBusinessLogicServices()
+        .AddJsonServices();
 
         return services;
     }
