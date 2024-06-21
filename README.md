@@ -1,6 +1,6 @@
 # DotNet8WebApi.HexagonalWithResultPattern
 
-> [!Project Scope]
+> [!NOTE]
 > Sample mini CRUD using Vertical Slice Architecture, N Layer Architecture and Repository Design Pattern
 
 ### EF scaffold Db Context Command
