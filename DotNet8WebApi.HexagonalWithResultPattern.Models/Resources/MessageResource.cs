@@ -16,5 +16,6 @@ namespace DotNet8WebApi.HexagonalWithResultPattern.Models.Resources
         public static string DeleteSuccess { get; } = "Deleting Successful.";
         public static string DeleteFail { get; } = "Deleting Fail.";
         public static string NotFound { get; } = "No Data Found.";
+        public static string InvalidId { get; } = "Id is invalid.";
     }
 }

@@ -1,5 +1,6 @@
 ﻿using DotNet8WebApi.HexagonalWithResultPattern.Models.Features;
 using DotNet8WebApi.HexagonalWithResultPattern.Models.Features.Blog;
+using DotNet8WebApi.HexagonalWithResultPattern.Models.Resources;
 using DotNet8WebApi.HexagonalWithResultPattern.Repositories.Blog;
 using Microsoft.AspNetCore.Http.HttpResults;
 
@@ -24,7 +25,7 @@ namespace DotNet8WebApi.HexagonalWithResultPattern.Features.Blog
             Result<BlogModel> responseModel;
             if (id <= 0)
             {
-                responseModel = Result<BlogModel>.FailureResult("Id is invalid.");
+                responseModel = Result<BlogModel>.FailureResult(MessageResource.InvalidId);
                 goto result;
             }
 
@@ -45,7 +46,7 @@ namespace DotNet8WebApi.HexagonalWithResultPattern.Features.Blog
 
             if (id <= 0)
             {
-                responseModel = Result<BlogResponseModel>.FailureResult("Id is invalid.");
+                responseModel = Result<BlogResponseModel>.FailureResult(MessageResource.InvalidId);
                 goto result;
             }
 
@@ -61,7 +62,7 @@ namespace DotNet8WebApi.HexagonalWithResultPattern.Features.Blog
 
             if (id <= 0)
             {
-                responseModel = Result<BlogResponseModel>.FailureResult("Id is invalid.");
+                responseModel = Result<BlogResponseModel>.FailureResult(MessageResource.InvalidId);
                 goto result;
             }
 

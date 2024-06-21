@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DotNet8WebApi.HexagonalWithResultPattern.Shared;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,29 +9,29 @@ namespace DotNet8WebApi.HexagonalWithResultPattern.Models.Features.Blog
 {
     public class BlogRequestModel
     {
-        public string? BlogTitle { get; set; }
+        public string BlogTitle { get; set; } = null!;
 
-        public string? BlogAuthor { get; set; }
+        public string BlogAuthor { get; set; } = null!;
 
-        public string? BlogContent { get; set; }
+        public string BlogContent { get; set; } = null!;
 
         public Result<BlogResponseModel> IsValid()
         {
             Result<BlogResponseModel> responseModel;
 
-            if (string.IsNullOrEmpty(BlogTitle))
+            if (BlogTitle.IsNullOrEmpty())
             {
                 responseModel = Result<BlogResponseModel>.FailureResult("Blog Title cannot be empty.");
                 goto result;
             }
 
-            if (string.IsNullOrEmpty(BlogAuthor))
+            if (BlogAuthor.IsNullOrEmpty())
             {
                 responseModel = Result<BlogResponseModel>.FailureResult("Blog Author cannot be empty.");
                 goto result;
             }
 
-            if (string.IsNullOrEmpty(BlogContent))
+            if (BlogContent.IsNullOrEmpty())
             {
                 responseModel = Result<BlogResponseModel>.FailureResult("Blog Content cannot be empty.");
                 goto result;

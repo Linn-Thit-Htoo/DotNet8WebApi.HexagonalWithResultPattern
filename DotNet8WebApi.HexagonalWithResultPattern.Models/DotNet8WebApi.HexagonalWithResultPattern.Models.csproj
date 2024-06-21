@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\DotNet8WebApi.HexagonalWithResultPattern.Shared\DotNet8WebApi.HexagonalWithResultPattern.Shared.csproj" />
+  </ItemGroup>
+
 </Project>

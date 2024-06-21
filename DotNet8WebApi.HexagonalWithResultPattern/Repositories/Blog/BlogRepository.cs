@@ -3,6 +3,7 @@ using DotNet8WebApi.HexagonalWithResultPattern.Mapper;
 using DotNet8WebApi.HexagonalWithResultPattern.Models.Features;
 using DotNet8WebApi.HexagonalWithResultPattern.Models.Features.Blog;
 using DotNet8WebApi.HexagonalWithResultPattern.Models.Resources;
+using DotNet8WebApi.HexagonalWithResultPattern.Shared;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
 
@@ -125,17 +126,17 @@ namespace DotNet8WebApi.HexagonalWithResultPattern.Repositories.Blog
                     goto result;
                 }
 
-                if (!string.IsNullOrEmpty(requestModel.BlogTitle))
+                if (!requestModel.BlogTitle.IsNullOrEmpty())
                 {
                     item.BlogTitle = requestModel.BlogTitle;
                 }
 
-                if (!string.IsNullOrEmpty(requestModel.BlogAuthor))
+                if (!requestModel.BlogAuthor.IsNullOrEmpty())
                 {
                     item.BlogAuthor = requestModel.BlogAuthor;
                 }
 
-                if (!string.IsNullOrEmpty(requestModel.BlogContent))
+                if (!requestModel.BlogContent.IsNullOrEmpty())
                 {
                     item.BlogContent = requestModel.BlogContent;
                 }
