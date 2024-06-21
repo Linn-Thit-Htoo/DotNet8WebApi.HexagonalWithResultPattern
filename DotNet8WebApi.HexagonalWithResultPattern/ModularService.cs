@@ -1,6 +1,4 @@
-﻿using DotNet8WebApi.HexagonalWithResultPattern.DbService.AppDbContexts;
-using DotNet8WebApi.HexagonalWithResultPattern.Features.Blog;
-using Microsoft.EntityFrameworkCore;
+﻿using DotNet8WebApi.HexagonalWithResultPattern.Features.Blog;
 
 namespace DotNet8WebApi.HexagonalWithResultPattern
 {

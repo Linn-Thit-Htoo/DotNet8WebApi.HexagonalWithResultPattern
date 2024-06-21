@@ -1,9 +1,4 @@
-﻿using DotNet8WebApi.HexagonalWithResultPattern.DbService.AppDbContexts;
-using DotNet8WebApi.HexagonalWithResultPattern.Mapper;
-using DotNet8WebApi.HexagonalWithResultPattern.Shared;
-using Microsoft.EntityFrameworkCore;
-
-namespace DotNet8WebApi.HexagonalWithResultPattern.Repositories.Blog;
+﻿namespace DotNet8WebApi.HexagonalWithResultPattern.Repositories.Blog;
 
 public class BlogRepository : IBlogRepository
 {
