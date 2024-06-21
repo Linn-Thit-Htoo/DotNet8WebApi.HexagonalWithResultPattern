@@ -3,72 +3,71 @@ using DotNet8WebApi.HexagonalWithResultPattern.Models.Features.Blog;
 using DotNet8WebApi.HexagonalWithResultPattern.Models.Resources;
 using DotNet8WebApi.HexagonalWithResultPattern.Repositories.Blog;
 
-namespace DotNet8WebApi.HexagonalWithResultPattern.Features.Blog
+namespace DotNet8WebApi.HexagonalWithResultPattern.Features.Blog;
+
+public class BL_Blog
 {
-    public class BL_Blog
+    private readonly IBlogRepository _blogRepository;
+
+    public BL_Blog(IBlogRepository blogRepository)
     {
-        private readonly IBlogRepository _blogRepository;
+        _blogRepository = blogRepository;
+    }
 
-        public BL_Blog(IBlogRepository blogRepository)
+    public async Task<Result<BlogListResponseModel>> GetBlogs()
+    {
+        return await _blogRepository.GetBlogs();
+    }
+
+    public async Task<Result<BlogModel>> GetBlog(int id)
+    {
+        Result<BlogModel> responseModel;
+        if (id <= 0)
         {
-            _blogRepository = blogRepository;
+            responseModel = Result<BlogModel>.FailureResult(MessageResource.InvalidId);
+            goto result;
         }
 
-        public async Task<Result<BlogListResponseModel>> GetBlogs()
-        {
-            return await _blogRepository.GetBlogs();
-        }
-
-        public async Task<Result<BlogModel>> GetBlog(int id)
-        {
-            Result<BlogModel> responseModel;
-            if (id <= 0)
-            {
-                responseModel = Result<BlogModel>.FailureResult(MessageResource.InvalidId);
-                goto result;
-            }
-
-            responseModel = await _blogRepository.GetBlog(id);
+        responseModel = await _blogRepository.GetBlog(id);
 
         result:
-            return responseModel;
+        return responseModel;
+    }
+
+    public async Task<Result<BlogResponseModel>> CreateBlog(BlogRequestModel requestModel)
+    {
+        return await _blogRepository.CreateBlog(requestModel);
+    }
+
+    public async Task<Result<BlogResponseModel>> PatchBlog(BlogRequestModel requestModel, int id)
+    {
+        Result<BlogResponseModel> responseModel;
+
+        if (id <= 0)
+        {
+            responseModel = Result<BlogResponseModel>.FailureResult(MessageResource.InvalidId);
+            goto result;
         }
 
-        public async Task<Result<BlogResponseModel>> CreateBlog(BlogRequestModel requestModel)
-        {
-            return await _blogRepository.CreateBlog(requestModel);
-        }
-
-        public async Task<Result<BlogResponseModel>> PatchBlog(BlogRequestModel requestModel, int id)
-        {
-            Result<BlogResponseModel> responseModel;
-
-            if (id <= 0)
-            {
-                responseModel = Result<BlogResponseModel>.FailureResult(MessageResource.InvalidId);
-                goto result;
-            }
-
-            responseModel = await _blogRepository.PatchBlog(requestModel, id);
+        responseModel = await _blogRepository.PatchBlog(requestModel, id);
 
         result:
-            return responseModel;
+        return responseModel;
+    }
+
+    public async Task<Result<BlogResponseModel>> DeleteBlog(int id)
+    {
+        Result<BlogResponseModel> responseModel;
+
+        if (id <= 0)
+        {
+            responseModel = Result<BlogResponseModel>.FailureResult(MessageResource.InvalidId);
+            goto result;
         }
 
-        public async Task<Result<BlogResponseModel>> DeleteBlog(int id)
-        {
-            Result<BlogResponseModel> responseModel;
-
-            if (id <= 0)
-            {
-                responseModel = Result<BlogResponseModel>.FailureResult(MessageResource.InvalidId);
-                goto result;
-            }
-
-            responseModel = await _blogRepository.DeleteBlog(id);
+        responseModel = await _blogRepository.DeleteBlog(id);
 
         result:
-            return responseModel;
-        }
+        return responseModel;
     }
 }
