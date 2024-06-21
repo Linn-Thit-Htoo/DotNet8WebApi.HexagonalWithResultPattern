@@ -1,6 +1,4 @@
-﻿using DotNet8WebApi.HexagonalWithResultPattern.Features.Blog;
-
-namespace DotNet8WebApi.HexagonalWithResultPattern
+﻿namespace DotNet8WebApi.HexagonalWithResultPattern
 {
     public static class ModularService
     {

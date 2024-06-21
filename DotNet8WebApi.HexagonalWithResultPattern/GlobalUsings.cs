@@ -1,6 +1,7 @@
 // Global using directives
 
 global using DotNet8WebApi.HexagonalWithResultPattern.DbService.AppDbContexts;
+global using DotNet8WebApi.HexagonalWithResultPattern.Features.Blog;
 global using DotNet8WebApi.HexagonalWithResultPattern.Mapper;
 global using DotNet8WebApi.HexagonalWithResultPattern.Models.Features;
 global using DotNet8WebApi.HexagonalWithResultPattern.Models.Features.Blog;
