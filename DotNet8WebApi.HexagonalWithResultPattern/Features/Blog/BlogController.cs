@@ -1,5 +1,4 @@
-﻿using DotNet8WebApi.HexagonalWithResultPattern.Models.Features.Blog;
-using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace DotNet8WebApi.HexagonalWithResultPattern.Features.Blog

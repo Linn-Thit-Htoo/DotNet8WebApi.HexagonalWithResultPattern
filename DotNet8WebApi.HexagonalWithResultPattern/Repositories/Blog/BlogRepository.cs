@@ -1,8 +1,5 @@
 ﻿using DotNet8WebApi.HexagonalWithResultPattern.DbService.AppDbContexts;
 using DotNet8WebApi.HexagonalWithResultPattern.Mapper;
-using DotNet8WebApi.HexagonalWithResultPattern.Models.Features;
-using DotNet8WebApi.HexagonalWithResultPattern.Models.Features.Blog;
-using DotNet8WebApi.HexagonalWithResultPattern.Models.Resources;
 using DotNet8WebApi.HexagonalWithResultPattern.Shared;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
