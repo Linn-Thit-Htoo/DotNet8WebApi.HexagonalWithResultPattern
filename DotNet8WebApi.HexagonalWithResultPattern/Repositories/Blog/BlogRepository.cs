@@ -32,8 +32,7 @@ public class BlogRepository : IBlogRepository
         Result<BlogResponseModel> responseModel;
         try
         {
-            var item = await _appDbContext.TblBlogs
-                .FirstOrDefaultAsync(x => x.BlogId == id);
+            var item = await _appDbContext.TblBlogs.FirstOrDefaultAsync(x => x.BlogId == id);
             if (item is null)
             {
                 responseModel = Result<BlogResponseModel>.FailureResult(MessageResource.NotFound);
@@ -59,8 +58,7 @@ public class BlogRepository : IBlogRepository
         Result<BlogModel> responseModel;
         try
         {
-            var item = await _appDbContext.TblBlogs
-                .FindAsync(id);
+            var item = await _appDbContext.TblBlogs.FindAsync(id);
             if (item is null)
             {
                 responseModel = Result<BlogModel>.FailureResult(MessageResource.NotFound);
@@ -84,15 +82,12 @@ public class BlogRepository : IBlogRepository
         Result<BlogListResponseModel> responseModel;
         try
         {
-            var dataLst = await _appDbContext.TblBlogs
-                .OrderByDescending(x => x.BlogId)
+            var dataLst = await _appDbContext
+                .TblBlogs.OrderByDescending(x => x.BlogId)
                 .ToListAsync();
             var lst = dataLst.Select(x => x.Change()).ToList();
 
-            var model = new BlogListResponseModel
-            {
-                DataLst = lst
-            };
+            var model = new BlogListResponseModel { DataLst = lst };
 
             responseModel = Result<BlogListResponseModel>.SuccessResult(model);
         }
@@ -109,8 +104,7 @@ public class BlogRepository : IBlogRepository
         Result<BlogResponseModel> responseModel;
         try
         {
-            var item = await _appDbContext.TblBlogs
-                .FirstOrDefaultAsync(x => x.BlogId == id);
+            var item = await _appDbContext.TblBlogs.FirstOrDefaultAsync(x => x.BlogId == id);
             if (item is null)
             {
                 responseModel = Result<BlogResponseModel>.FailureResult(MessageResource.NotFound);
