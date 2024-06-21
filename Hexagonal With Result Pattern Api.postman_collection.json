@@ -1,0 +1,303 @@
+{
+	"info": {
+		"_postman_id": "d6f6a82c-60eb-436c-b8b2-4e6f0c451ff2",
+		"name": "Hexagonal With Result Pattern Api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20765565",
+		"_collection_link": "https://cloudy-astronaut-89463.postman.co/workspace/APIs~9c93f82e-c4f6-4440-97a9-5eaf36f09af6/collection/20765565-d6f6a82c-60eb-436c-b8b2-4e6f0c451ff2?action=share&source=collection_link&creator=20765565"
+	},
+	"item": [
+		{
+			"name": "Lst",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7280/api/Blog",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7280",
+					"path": [
+						"api",
+						"Blog"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Lst",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7280/api/Blog",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7280",
+							"path": [
+								"api",
+								"Blog"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 21 Jun 2024 10:59:46 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\"Success\":true,\"Message\":\"Successful.\",\"Data\":{\"DataLst\":[{\"BlogId\":6,\"BlogTitle\":\"Hexagonal Architecture\",\"BlogAuthor\":\"Hexagonal Architecture\",\"BlogContent\":\"Hexagonal Architecture\"},{\"BlogId\":2,\"BlogTitle\":\"odata edited\",\"BlogAuthor\":\"odata edited\",\"BlogContent\":\"odata\"}]}}"
+				}
+			]
+		},
+		{
+			"name": "Create Blog",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"BlogTitle\": \"Hexagonal Architecture\",\r\n    \"BlogAuthor\": \"Hexagonal Architecture\",\r\n    \"BlogContent\": \"Hexagonal Architecture\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7280/api/Blog",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7280",
+					"path": [
+						"api",
+						"Blog"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Create Blog",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"BlogTitle\": \"Hexagonal Architecture\",\r\n    \"BlogAuthor\": \"Hexagonal Architecture\",\r\n    \"BlogContent\": \"Hexagonal Architecture\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7280/api/Blog",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7280",
+							"path": [
+								"api",
+								"Blog"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 21 Jun 2024 10:59:29 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\"Success\":true,\"Message\":\"Successful.\",\"Data\":null}"
+				}
+			]
+		},
+		{
+			"name": "Patch Blog",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"BlogTitle\": \"Hexagonal Architecture edited\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7280/api/Blog/6",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7280",
+					"path": [
+						"api",
+						"Blog",
+						"6"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Patch Blog",
+					"originalRequest": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"BlogTitle\": \"Hexagonal Architecture edited\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7280/api/Blog/6",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7280",
+							"path": [
+								"api",
+								"Blog",
+								"6"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 21 Jun 2024 11:01:00 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\"Success\":true,\"Message\":\"Successful.\",\"Data\":null}"
+				}
+			]
+		},
+		{
+			"name": "Delete Blog",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7280/api/Blog/2",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7280",
+					"path": [
+						"api",
+						"Blog",
+						"2"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Delete Blog",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7280/api/Blog/2",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7280",
+							"path": [
+								"api",
+								"Blog",
+								"2"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 21 Jun 2024 11:02:14 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\"Success\":true,\"Message\":\"Successful.\",\"Data\":null}"
+				}
+			]
+		}
+	]
+}

@@ -13,6 +13,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNet8WebApi.HexagonalWith
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNet8WebApi.HexagonalWithResultPattern.Mapper", "DotNet8WebApi.HexagonalWithResultPattern.Mapper\DotNet8WebApi.HexagonalWithResultPattern.Mapper.csproj", "{E49DF4C1-60CE-4760-9824-9CAC2CAB585E}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documents", "Documents", "{9E506952-697F-430C-8AB9-1E32831292BF}"
+	ProjectSection(SolutionItems) = preProject
+		Hexagonal With Result Pattern Api.postman_collection.json = Hexagonal With Result Pattern Api.postman_collection.json
+		script.sql = script.sql
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
