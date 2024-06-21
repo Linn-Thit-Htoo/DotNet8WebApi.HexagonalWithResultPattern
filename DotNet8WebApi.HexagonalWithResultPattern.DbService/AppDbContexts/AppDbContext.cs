@@ -1,6 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore;
-
-namespace DotNet8WebApi.HexagonalWithResultPattern.DbService.AppDbContexts;
+﻿namespace DotNet8WebApi.HexagonalWithResultPattern.DbService.AppDbContexts;
 
 public partial class AppDbContext : DbContext
 {
