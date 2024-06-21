@@ -2,7 +2,6 @@
 using DotNet8WebApi.HexagonalWithResultPattern.Models.Features.Blog;
 using DotNet8WebApi.HexagonalWithResultPattern.Models.Resources;
 using DotNet8WebApi.HexagonalWithResultPattern.Repositories.Blog;
-using Microsoft.AspNetCore.Http.HttpResults;
 
 namespace DotNet8WebApi.HexagonalWithResultPattern.Features.Blog
 {
